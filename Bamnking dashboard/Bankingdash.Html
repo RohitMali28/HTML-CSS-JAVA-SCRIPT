@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banking Dashboard</title>
+  <link rel="stylesheet" href="Bankingdash.CSS">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Banking Dashboard</h1>
+    </header>
+    <main>
+      <section class="account-info">
+        <h2>Account Information</h2>
+        <p>Account Number: 1234567890</p>
+        <p>Account Balance: $1000.00</p>
+      </section>
+      <section class="transaction-form">
+        <h2>Transaction Form</h2>
+        <form id="transaction-form">
+          <label for="transaction-type">Transaction Type:</label>
+          <select id="transaction-type" name="transaction-type">
+            <option value="deposit">Deposit</option>
+            <option value="withdrawal">Withdrawal</option>
+          </select>
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" name="amount" required>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      <section class="transaction-history">
+        <h2>Transaction History</h2>
+        <table id="transaction-history-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Transaction Type</th>
+              <th>Amount</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody id="transaction-history-body">
+            <!-- transaction history will be displayed here -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="Bankingdash.js"></script>
+</body>
+</html>

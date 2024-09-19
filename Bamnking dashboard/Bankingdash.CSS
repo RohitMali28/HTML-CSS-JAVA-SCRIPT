@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .account-info {
+    margin-top: 20px;
+  }
+  
+  .account-info h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .transaction-form {
+    margin-top: 20px;
+  }
+  
+  .transaction-form h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .transaction-form form {
+    margin-top: 10px;
+  }
+  
+  .transaction-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .transaction-form input[type="number"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .transaction-form button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .transaction-history {
+    margin-top: 20px;
+  }
+  
+  .transaction-history h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .transaction-history table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .transaction-history th, .transaction-history td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .transaction-history th {
+    background-color: #f0f0f0;
+  }

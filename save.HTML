@@ -1,0 +1,12 @@
+<a href="#" onclick="printPDF()">Save as PDF</a>
+
+<script>
+  function printPDF() {
+    var html = document.documentElement.outerHTML;
+    var url = 'data:application/pdf;base64,' + btoa(html);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'Rohit_Mali_Resume.pdf';
+    a.click();
+  }
+</script>

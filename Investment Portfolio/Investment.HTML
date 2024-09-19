@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+   <meta charset="UTF-8">  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+   <title>Investment App</title>  
+   <link rel="stylesheet" href="Investment.CSS">  
+</head>  
+<body>  
+   <header>  
+      <h1>Investment App</h1>  
+   </header>  
+   <main>  
+      <section class="investment-form">  
+        <h2>Investment Details</h2>  
+        <form id="investment-form">  
+           <label for="investment-amount">Investment Amount:</label>  
+           <input type="number" id="investment-amount" required>  
+           <label for="interest-rate">Interest Rate (%):</label>  
+           <input type="number" id="interest-rate" required>  
+           <label for="investment-timing">Investment Timing (years):</label>  
+           <input type="number" id="investment-timing" required>  
+           <button id="calculate-btn">Calculate</button>  
+        </form>  
+      </section>  
+      <section class="investment-result">  
+        <h2>Investment Result</h2>  
+        <p id="result-message"></p>  
+        <canvas id="investment-graph" width="400" height="200"></canvas>  
+      </section>  
+   </main>  
+   <script src="Investment.js"></script>  
+</body>  
+</html>
