@@ -1,0 +1,289 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #d39292;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Home Page */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    background-image: url('home-background.jpg'); /* Update path to your home page background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.auth-links {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.auth-links a {
+    color: #f3b2b2;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+/* Auth Pages (Login, Register) */
+.auth-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    margin: 100px auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-image: url('auth-background.jpg'); /* Update path to your login/register background image */
+    background-size: cover;
+    background-position: center;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #db7070;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #475c64;
+    font-size: 1em;
+    color: #333;
+}
+
+button {
+    padding: 12px;
+    font-size: 1.1em;
+    border: none;
+    background-color: #5cb85c;
+    color: rgb(221, 96, 96);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.auth-links {
+    text-align: center;
+    font-size: 1em;
+}
+
+.auth-links a {
+    color: #f7f4f4;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+/* Employee Dashboard */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-image: url('dashboard-background.jpg'); /* Update path to your dashboard background image */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border: none;
+    background-color: #5cb85c;
+    color: rgb(48, 39, 30);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px 0;
+}
+
+button:disabled {
+    background-color: #52a4b3;
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+table {
+    width: 100%;
+    margin-top: 40px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #c5b7c4;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: rgb(134, 127, 127);
+}
+
+td {
+    background-color: #b17070;
+}
+
+td span {
+    font-size: 1em;
+}
+
+/* Attendance History Page */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-image: url('history-background.jpg'); /* Update path to your attendance history background image */
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #657dc9;
+}
+
+table {
+    width: 100%;
+    margin-top: 40px;
+    border-collapse: collapse;
+    background-color: #6eda5f;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #b0c990;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: rgb(82, 33, 33);
+}
+
+td {
+    background-color: #ffffff;
+}
+
+td span {
+    font-size: 1em;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.8em;
+    }
+
+    .auth-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .auth-links {
+        font-size: 1em;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #080807;
+    background-image: url('frontpage.png'); /* Replace with your image path */
+    background-size: cover; /* This will make sure the image covers the entire page */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    height: 100vh; /* Full height of the viewport */
+    margin: 500;
+    padding: 500;
+}
+
+.auth-container {
+    background-image: url('loginpage.jpeg'); /* Replace with your login/register image path */
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    margin: 100px auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-image: url('front.jpg'); /* Replace with your dashboard background image */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Make sure the container takes up the full height */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-image: url(''); /* Replace with your history background image */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Full height of the page */
+}
+

@@ -85,3 +85,59 @@ document.getElementById("logoutButton")?.addEventListener("click", function () {
     localStorage.removeItem("loggedInUser");
     window.location.href = "index.html";
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get form elements
+    const registerForm = document.getElementById("registerForm");
+    const messageElement = document.getElementById("message");
+
+    // Add event listener to form submission
+    registerForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent form from submitting the traditional way
+
+        // Get user input values
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+
+        // Basic validation
+        if (password !== confirmPassword) {
+            messageElement.style.color = "red";
+            messageElement.textContent = "Passwords do not match.";
+            return;
+        }
+
+        // Check if user already exists
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const userExists = users.some(user => user.email === email);
+
+        if (userExists) {
+            messageElement.style.color = "red";
+            messageElement.textContent = "This email is already registered.";
+            return;
+        }
+
+        // Save the user data to localStorage
+        const newUser = {
+            name: name,
+            email: email,
+            password: password
+        };
+
+        users.push(newUser);
+        localStorage.setItem("users", JSON.stringify(users));
+
+        // Show success message
+        messageElement.style.color = "green";
+        messageElement.textContent = "Registration successful! Please login.";
+
+        // Clear form
+        registerForm.reset();
+
+        // Optionally, redirect to login page after some delay (3 seconds)
+        setTimeout(function () {
+            window.location.href = "login.html"; // Redirect to login page
+        }, 3000);
+    });
+});
