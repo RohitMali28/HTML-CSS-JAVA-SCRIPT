@@ -1,69 +1,70 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insurance Self-Service Portal</title>
+    <title>Insurance Customer Self-Service Portal</title>
     <link rel="stylesheet" href="Selfservice.css">
 </head>
 <body>
-    <header>
-        <h1>Insurance Self-Service Portal</h1>
-        <nav>
-            <button id="fileClaimBtn">File a Claim</button>
-            <button id="trackClaimsBtn">Track Claims</button>
-            <button id="chatbotBtn">Chatbot</button>
-        </nav>
-    </header>
-    <main>
-        <section id="recentClaims">
-            <h2>Recent Claims</h2>
-            <table>
-                <tr>
-                    <th>Claim Number</th>
-                    <th>Status</th>
-                    <th>Date Submitted</th>
-                </tr>
-                <!-- Dynamically generated rows go here -->
-            </table>
-        </section>
-        <section id="claimForm">
-            <h2>Submit a New Insurance Claim</h2>
-            <form id="submissionForm">
-                <label for="policyNumber">Policy Number:</label>
-                <input type="text" id="policyNumber" required>
-                <label for="incidentDate">Incident Date:</label>
-                <input type="date" id="incidentDate" required>
-                <label for="incidentDescription">Incident Description:</label>
-                <textarea id="incidentDescription" required></textarea>
-                <label for="fileUpload">Attach Files:</label>
-                <input type="file" id="fileUpload">
-                <button type="submit">Submit Claim</button>
-            </form>
-            <div id="formFeedback"></div>
-        </section>
-        <section id="chatbotContainer">
-            
-            <h2>Chat with Us</h2>
-            
-            <!-- Create a text input for the user to enter their input -->
-             <input id="user-input" type="text" placeholder="Enter your input here">
-
-             <!-- Create a button to send the user's input to the chatbot -->
-             <button id="send-button">Send</button>
-
-             <!-- Create a div to display the chatbot's response -->
-             <div id="chatbot-response"></div>
-
-            <!-- Chatbot will be embedded here -->
-             <script src="Chatbot.js"></script>
-        </section>
-        <section id="knowledgeBase">
-            <h2>Search Knowledge Base</h2>
-            <input type="text" id="searchInput" placeholder="Search articles...">
-            <div id="searchResults"></div>
-        </section>
-    </main>
+    <div class="container">
+        <header>
+            <h1>Insurance Customer Self-Service Portal</h1>
+            <nav>
+                <button onclick="showSection('fileClaim')">File a Claim</button>
+                <button onclick="showSection('trackClaims')">Track Claims</button>
+                <button onclick="showSection('chatbot')">Chatbot</button>
+                <button onclick="showSection('knowledgeBase')">Search Knowledge Base</button>
+            </nav>
+        </header>
+        <main>
+            <section id="fileClaim" class="hidden">
+                <h2>Submit a New Insurance Claim</h2>
+                <form id="claimForm">
+                    <label for="policyNumber">Policy Number:</label>
+                    <input type="text" id="policyNumber" required>
+                    <label for="incidentDate">Incident Date:</label>
+                    <input type="date" id="incidentDate" required>
+                    <label for="incidentDescription">Incident Description:</label>
+                    <textarea id="incidentDescription" required></textarea>
+                    <label for="fileUpload">Attach Files:</label>
+                    <input type="file" id="fileUpload" multiple>
+                    <button type="submit">Submit Claim</button>
+                </form>
+                <p id="formMessage"></p>
+            </section>
+            <section id="trackClaims" class="hidden">
+                <h2>Track Claim Status</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Claim Number</th>
+                            <th>Status</th>
+                            <th>Date Submitted</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="claimsTableBody">
+                      
+                    </tbody>
+                </table>
+            </section>
+            <section id="chatbot" class="hidden">
+                <h2>Chat with Us (AI-Powered Chatbot)</h2>
+                <iframe
+                    width="350"
+                    height="430"
+                    allow="microphone;"
+                    src="google.com">
+                </iframe>
+            </section>
+            <section id="knowledgeBase" class="hidden">
+                <h2>Search Knowledge Base</h2>
+                <input type="text" id="searchBar" placeholder="Search...">
+                <div id="searchResults"></div>
+            </section>
+        </main>
+    </div>
     <script src="Selfservic.js"></script>
 </body>
 </html>
