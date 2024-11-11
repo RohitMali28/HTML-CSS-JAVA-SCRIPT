@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Dashboard</title>
+    <link rel="stylesheet" href="B.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Banking Dashboard</h1>
+        <div id="login-form">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p><a href="#" onclick="sendOTP()">Forgot Password?</a></p>
+        </div>
+
+        <div id="dashboard" style="display:none;">
+            <h2>Welcome, <span id="user-name"></span></h2>
+            <div>
+                <h3>Account Balance: <span id="balance">0</span></h3>
+                <button onclick="withdraw()">Withdraw</button>
+                <button onclick="deposit()">Deposit</button>
+                <button onclick="sendMoney()">Send Money</button>
+            </div>
+            <h3>Account History</h3>
+            <div id="account-history"></div>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <script src="B.js"></script>
+</body>
+</html>
