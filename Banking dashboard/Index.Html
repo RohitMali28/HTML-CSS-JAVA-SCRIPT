@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banking Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Banking Dashboard</h1>
+    </header>
+
+    <main>
+      <!-- Login Form -->
+      <section id="login-section">
+        <h2>Login</h2>
+        <form id="login-form">
+          <label for="login-username">Username:</label>
+          <input type="text" id="login-username" name="login-username" required>
+
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" name="login-password" required>
+
+          <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="go-to-register">Register here</a></p>
+      </section>
+
+      <!-- Registration Form -->
+      <section id="register-section" style="display:none;">
+        <h2>Register</h2>
+        <form id="registration-form">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+
+          <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="#" id="go-to-login">Login here</a></p>
+      </section>
+
+      <!-- Dashboard (Only visible after login) -->
+      <section id="dashboard-section" style="display:none;">
+        <h2>Account Information</h2>
+        <p id="account-balance">Account Balance: $1000.00</p>
+
+        <!-- Transaction Form -->
+        <h2>Transaction Form</h2>
+        <form id="transaction-form">
+          <label for="transaction-type">Transaction Type:</label>
+          <select id="transaction-type" name="transaction-type">
+            <option value="deposit">Deposit</option>
+            <option value="withdrawal">Withdrawal</option>
+          </select>
+
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" name="amount" required>
+
+          <button type="submit">Submit</button>
+        </form>
+
+        <!-- Transaction History -->
+        <h2>Transaction History</h2>
+        <table id="transaction-history-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Transaction Type</th>
+              <th>Amount</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody id="transaction-history-body">
+            <!-- Transaction history will be dynamically added here -->
+          </tbody>
+        </table>
+
+        <!-- Logout Button -->
+        <button id="logout-button">Logout</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
