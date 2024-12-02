@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #2c7d59;
+  margin-bottom: 20px;
+}
+
+.bundle-option {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.bundle-option input {
+  margin-right: 10px;
+}
+
+.bundle-option label {
+  display: block;
+  cursor: pointer;
+}
+
+.discount {
+  color: green;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.most-popular {
+  background: yellow;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+.selectors .selector-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.selectors label {
+  margin-right: 5px;
+}
+
+.selectors select {
+  margin-right: 15px;
+  padding: 5px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #2c7d59;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
